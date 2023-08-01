@@ -96,7 +96,7 @@ function ResponsiveAppBar({user}) {
                     </Box>
                     <Box sx={{flexGrow: 1}}>
                         <div className="items-center">
-                            <LogoIcon color={'primary'}/>
+                            <LogoIcon className={"h-16 w-16 fill-white"}/>
                         </div>
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
