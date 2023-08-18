@@ -2,9 +2,9 @@
 
 import Auth from '@/components/Auth';
 import {useAuth, VIEWS} from '@/components/authProvider';
-import ResponsiveAppBar from "@/components/UI/appBar";
 import SignOut from "@/components/signOut";
 import DataTable from "@/components/data/DataTable";
+import {NextUIProvider} from "@nextui-org/react";
 
 export default function Home() {
     const {user, view, signOut} = useAuth();
@@ -15,15 +15,16 @@ export default function Home() {
 
     if (user) {
         return (
-            <>
-                <ResponsiveAppBar className="flex-initial" user={user}/>
-                <div
-                    className="flex w-full flex-1 shrink-0 flex-col items-center justify-center px-8 text-center sm:px-20 mt-24">
+                <section
+                    className="flex justify-center w-full text-center mt-24">
                     <DataTable />
-                </div>
-            </>
+                </section>
         );
     }
 
-    return <Auth view={view}/>;
+    return (
+        <NextUIProvider>
+            <Auth view={view}/>
+        </NextUIProvider>
+    );
 }
