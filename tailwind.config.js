@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const forms = require('@tailwindcss/forms');
 const {nextui} = require("@nextui-org/react");
 module.exports = {
   content: [

@@ -1,6 +1,6 @@
 'use client';
 
-import Auth from '@/components/Auth';
+import Auth from 'src/components/auth';
 import {useAuth, VIEWS} from '@/components/authProvider';
 import SignOut from "@/components/signOut";
 import DataTable from "@/components/data/DataTable";
@@ -15,16 +15,14 @@ export default function Home() {
 
     if (user) {
         return (
-                <section
-                    className="flex justify-center w-full text-center mt-24">
-                    <DataTable />
-                </section>
+            <section
+                className="flex justify-center w-full text-center mt-24">
+                <DataTable/>
+            </section>
         );
     }
 
     return (
-        <NextUIProvider>
-            <Auth view={view}/>
-        </NextUIProvider>
+        <Auth view={view}/>
     );
 }

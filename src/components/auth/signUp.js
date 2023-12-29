@@ -26,9 +26,9 @@ const SignUp = () => {
     }
 
     return (
-        <div className="flex-1 flex flex-col w-full px-8 sm:max-w-md justify-center gap-2">
+        <div className="flex-1 flex flex-col w-full px-8 items-center justify-center gap-2">
             <form
-                className="flex-1 flex flex-col w-full justify-center gap-2 text-foreground"
+                className="flex-1 flex flex-col w-full sm:max-w-md gap-2 text-foreground"
             >
                 <div className="grid grid-flow-col auto-cols-max gap-2 place-content-center pb-12">
                     <svg className="h-40 w-40 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330.51 150.7">

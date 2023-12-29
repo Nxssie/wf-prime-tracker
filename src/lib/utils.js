@@ -1,6 +1,6 @@
-export const sleep = (ms) =>
-    new Promise((resolve) => {
-        setTimeout(resolve, ms);
-    });
-
-export const fetcher = (url) => fetch(url).then((res) => res.json());
+import { clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
+ 
+export function cn(...inputs) {
+  return twMerge(clsx(inputs))
+}

@@ -1,6 +1,7 @@
 import './globals.css'
 import {Inter} from 'next/font/google'
 import {Providers} from "@/app/providers";
+export const dynamic = "force-dynamic";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -17,7 +18,6 @@ export default async function RootLayout({children}) {
         </head>
         <body>
             <Providers>{children}</Providers>
-
         </body>
         </html>
     );
